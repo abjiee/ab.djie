@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ab.jiee</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+        integrity="sha512-V0P7cpl1wrDd6zazE7kZ8VJ8G0G3ZAb8x1Tc64WZudGGggT9M0wGvQFVGHTPhtBVEFTnchhZLzP2PvZ2kH+ug==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="profil fade-in">
+      <img src="profil.jpg" alt="profil" />
+      <p>@ab.jiee</p>
+    </div>
+
+    <div class="link">
+      <a href="https://open.spotify.com/playlist/3bJOojcpTXn6K8Cc5fJ2Ad?si=jgAaHJVQT3yOsKmrp35F0Q" target="_blank" class="glow"><i class="fa-brands fa-spotify"></i> Song playlist</a>
+      <a href="https://share.google/mFbkJlcHKRk4fkc4U" target="_blank" class="glow"><i class="fa-brands fa-school"></i> Sekolah gua</a>
+      <a href="https://abjiee.github.io/listnime/" target="_blank" class="glow"><i class="fa-brands fa"></i> List tontonan fav</a>
+    </div>
+
+    <div class="footer float-up">
+      <i><span id="typed"></span></i>
+    </div>
+  </div>
+  <script>
+    var typed = new Typed("#typed", {
+      strings: ["buat hias bio", "wleowleowleo", "😹😹"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 0, "density": { "enable": true, "value_area": 0 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": {
+          "value": 0.5,
+          "random": true,
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+
+</html>

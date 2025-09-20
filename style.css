@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url("bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(25, 25, 25, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  color: #eee;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  animation: fade-in 1.2s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.profil img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 
+    0 0 25px rgba(200, 200, 200, 0.4),   /* aura silver */
+    0 0 50px rgba(255, 255, 255, 0.15),  /* aura putih halus */
+    0 0 80px rgba(180, 180, 180, 0.2);   /* aura abu ke luar */
+  animation: float 4s ease-in-out infinite;
+}
+
+.profil p {
+  font-size: 1.6em;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #cccccc, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+
+.link {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.link a.glow:hover {
+  background: linear-gradient(135deg, #00ffea33, #ff00ff33);
+  box-shadow: 0 0 12px rgba(0, 255, 234, 0.4), 0 0 25px rgba(255, 0, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.footer i {
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-up {
+  animation: float 6s ease-in-out infinite;
+}
+
+.profil img {
+  animation: float 4s ease-in-out infinite, aura 6s ease-in-out infinite;
+}
+
+@keyframes aura {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(200,200,200,0.4),
+                0 0 50px rgba(255,255,255,0.15),
+                0 0 80px rgba(180,180,180,0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(220,220,220,0.6),
+                0 0 70px rgba(255,255,255,0.3),
+                0 0 100px rgba(200,200,200,0.25);
+  }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("bg.jpg") no-repeat center center/cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
